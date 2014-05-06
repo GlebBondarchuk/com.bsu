@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+
+    <servlet>
+        <servlet-name>entryPoint</servlet-name>
+        <servlet-class>by.bsu.gbondarchuk.CoreRegistration</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>entryPoint</servlet-name>
+        <url-pattern>/registration</url-pattern>
+    </servlet-mapping>
+
+    <!--Forward JSP files-->
+
+    <servlet>
+        <servlet-name>registrationInfoPage</servlet-name>
+        <jsp-file>/WEB-INF/jsp/RegistrationInfo.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registrationInfoPage</servlet-name>
+        <url-pattern>/registration-info-page</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>commonPage</servlet-name>
+        <jsp-file>/WEB-INF/jsp/RegistrationPage.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>commonPage</servlet-name>
+        <url-pattern>/common-page</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>errorPage</servlet-name>
+        <jsp-file>/WEB-INF/jsp/ErrorPage.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>errorPage</servlet-name>
+        <url-pattern>/error-page</url-pattern>
+    </servlet-mapping>
+
+</web-app>
